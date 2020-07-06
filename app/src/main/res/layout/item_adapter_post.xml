@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/dime8dp"
+
+        android:background="?android:attr/selectableItemBackground"
+        android:elevation="4dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@android:color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/main_cnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="@dimen/dime16dp"
+                    android:layout_marginBottom="@dimen/dime16dp"
+                    android:maxWidth="300dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/dime24sp"
+                    android:textStyle="bold"
+                    tools:text="Title lablbalablablablablbalab" />
+
+
+                <TextView
+                    android:id="@+id/create_date_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/dime16dp"
+                    android:layout_marginTop="@dimen/dime16dp"
+                    android:layout_marginEnd="@dimen/dime16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/dime16dp"
+                    android:textStyle="italic"
+                    tools:text="10 of July " />
+
+                <ImageView
+                    android:id="@+id/image_imageview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_textview"
+                    android:maxHeight="250dp"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/main_cnt"
+                android:padding="@dimen/dime16dp">
+
+
+                <ImageView
+                    android:id="@+id/share_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_baseline_share_24" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

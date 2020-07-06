@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/dime16dp"
+        tools:context=".ui.posts.AddPostFragment">
+
+        <View
+            android:id="@+id/focusable_view"
+            android:layout_width="0.5dp"
+            android:layout_height="0.5dp"
+            android:focusableInTouchMode="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            />
+
+        <ImageView
+            android:id="@+id/background_imageview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_baseline_camera_alt_24"
+            app:layout_constraintBottom_toTopOf="@+id/change_image_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/image_imageview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/change_image_textview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/loading_image_progressbar"
+            android:visibility="invisible"
+            android:elevation="2dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/change_image_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/image_imageview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/change_image_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_orange_reddit"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dime8dp"
+            android:text="@string/change_image"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_imageview" />
+
+        <EditText
+            android:id="@+id/title_edittext"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/dime16dp"
+            android:background="@drawable/shape_border_and_background"
+            android:hint="@string/title"
+            android:imeOptions="flagNoExtractUi"
+            android:maxLines="1"
+            android:padding="@dimen/dime16dp"
+            android:textColorHint="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/change_image_textview" />
+
+
+        <EditText
+            android:id="@+id/desc_editText"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_margin="@dimen/dime16dp"
+            android:background="@drawable/shape_border_and_background"
+            android:gravity="top"
+            android:hint="@string/type_a_nice_history"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:padding="@dimen/dime16dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColorHint="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_edittext" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

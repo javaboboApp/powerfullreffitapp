@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/PostListFragment">
+
+    <fragment
+        android:id="@+id/PostListFragment"
+        android:name="com.javabobo.reddit.ui.posts.PostListFragment"
+        android:label="@string/list_reporter_title"
+        tools:layout="@layout/fragment_post_list" >
+        <action
+            android:id="@+id/action_newReporterListFragment_to_addNewsReporterFragment"
+            app:destination="@id/addPostFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+            />
+        <action
+            android:id="@+id/action_PostListFragment_to_postInfoFragment"
+            app:destination="@id/postInfoFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="com.javabobo.reddit.ui.posts.AddPostFragment"
+        android:label="@string/add_new"
+        tools:layout="@layout/fragment_add_post" />
+    <fragment
+        android:id="@+id/UpdatePostInfoFragment"
+        android:name="com.javabobo.reddit.ui.posts.UpdatePostInfoFragment"
+        android:label="@string/update_new_title"
+        tools:layout="@layout/fragment_update_post_info" >
+        <argument
+            android:name="post"
+            app:argType="com.javabobo.reddit.models.Post" />
+    </fragment>
+    <fragment
+        android:id="@+id/postInfoFragment"
+        tools:layout="@layout/fragment_post_info"
+        android:name="com.javabobo.reddit.ui.posts.PostInfoFragment"
+        android:label="" >
+        <action
+            android:id="@+id/action_postInfoFragment_to_UpdatePostInfoFragment"
+            app:destination="@id/UpdatePostInfoFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+        <argument
+            android:name="post"
+            app:argType="com.javabobo.reddit.models.Post" />
+    </fragment>
+</navigation>

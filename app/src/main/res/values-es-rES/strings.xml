@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="AuthNavHost">AuthNavHost</string>
+
+    <string name="app_name">Notas</string>
+    <string name="msg_error_retriving">Algo fue mal :(</string>
+    <string name="no_data">Sin datos</string>
+    <string name="type_a_nice_history">Escrite algo...</string>
+    <string name="add_new">Crear Post</string>
+    <string name="not_empty_field_error">Los campos no pueden estar vacias</string>
+    <string name="error_inserting_msg">Error al insertar</string>
+    <string name="list_reporter_title">Notas</string>
+    <string name="error_updating_msg">Error actualizando</string>
+    <string name="update_new_title">Actualizar post</string>
+    <string name="title">Titulo</string>
+
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email_field">Email</string>
+    <string name="password_field">Password</string>
+    <string name="login_field">Login</string>
+    <string name="text_login">Login</string>
+    <string name="field_username">Username</string>
+    <string name="field_password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="register_field">Register</string>
+    <string name="input_email_error">Email can not be empty</string>
+    <string name="password_can_not_be_empty">Password can not be empty</string>
+    <string name="input_confirm_error_password">Error password and confirm password must match</string>
+    <string name="error_register_process_msg">Error in the register process</string>
+    <string name="share">Share</string>
+</resources>

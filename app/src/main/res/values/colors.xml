@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#ECECEC</color>
+    <color name="colorAccent">#9A9A9A</color>
+    <color name="textColorActionBar">#000</color>
+    <color name="holo_orange_light">#FDD835</color>
+    <color name="color_orange_reddit">#FF3D00</color>
+    <color name="background_app">#E4E4E4</color>
+    <color name="brown">#795548</color>
+
+</resources>

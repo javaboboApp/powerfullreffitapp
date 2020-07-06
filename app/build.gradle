@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.javabobo.reddit"
+        minSdkVersion 28
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+def roomVersion = "2.2.3"
+def koinVersion = "2.1.5"
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    //ROOM
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "androidx.room:room-rxjava2:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
+    //KOIN
+    // Koin AndroidX Scope feature
+    implementation "org.koin:koin-androidx-scope:${koinVersion}"
+
+    // Koin AndroidX ViewModel feature
+    implementation "org.koin:koin-androidx-viewmodel:${koinVersion}"
+    // Koin AndroidX Fragment Factory (unstable version)
+    implementation "org.koin:koin-androidx-fragment:${koinVersion}"
+    // Koin for Kotlin apps
+    implementation "org.koin:koin-core:${koinVersion}"
+    // Testing
+    implementation "org.koin:koin-test:${koinVersion}"
+    //VIEW MODEL
+    implementation "org.koin:koin-android-viewmodel:${koinVersion}"
+
+    //navigation components
+    def nav_version = "2.3.0"
+    // Java language implementation
+
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Dynamic Feature Module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    // Add the Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics:17.4.3'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
+    implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'com.google.firebase:firebase-storage:17.0.0'
+    implementation 'com.firebaseui:firebase-ui-database:6.0.2'
+    //crop image
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    //    //glide
+    def glide_version = "4.9.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+
+}

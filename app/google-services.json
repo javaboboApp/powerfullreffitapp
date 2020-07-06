@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "537404845999",
+    "firebase_url": "https://reddit-9161d.firebaseio.com",
+    "project_id": "reddit-9161d",
+    "storage_bucket": "reddit-9161d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537404845999:android:59516176981dc03e68895a",
+        "android_client_info": {
+          "package_name": "com.javabobo.reddit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537404845999-sa0b03p313kr70dirfk4ihvf03q6lr3r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.javabobo.reddit",
+            "certificate_hash": "111afdc7d541529f4c5fcdf6c6b92b68068d1ee1"
+          }
+        },
+        {
+          "client_id": "537404845999-578iu8qmioc605ovbkmo3iavcfemis09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAheJoh6cEBaaaxgrj94M0wCf8k47QFt2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537404845999-578iu8qmioc605ovbkmo3iavcfemis09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

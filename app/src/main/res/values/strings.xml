@@ -1,0 +1,35 @@
+<resources>
+    <string name="AuthNavHost">AuthNavHost</string>
+
+    <string name="app_name">Reddit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="msg_error_retriving">Something was wrong :(</string>
+    <string name="no_data">No data</string>
+    <string name="title">Title</string>
+    <string name="type_a_nice_history">Type a nice post...</string>
+    <string name="add_new">Add Post</string>
+    <string name="not_empty_field_error">Fields can not be empty</string>
+    <string name="error_inserting_msg">Error inserting</string>
+    <string name="list_reporter_title">Reddit</string>
+    <string name="error_updating_msg">Error updating</string>
+    <string name="update_new_title">Update Post</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email_field">Email</string>
+    <string name="password_field">Password</string>
+    <string name="login_field">Login</string>
+    <string name="text_login">Login</string>
+    <string name="field_username">Username</string>
+    <string name="field_password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="register_field">Register</string>
+    <string name="input_email_error">Email can not be empty</string>
+    <string name="password_can_not_be_empty">Password can not be empty</string>
+    <string name="input_confirm_error_password">Error password and confirm password must match</string>
+    <string name="error_register_process_msg">Error in the register process</string>
+    <string name="share">Share</string>
+    <string name="msg_error_deleting">There was an error deleting</string>
+    <string name="error_not_allowed_delete">This post is not yours !!</string>
+    <string name="change_image">CHANGE IMAGE</string>
+</resources>

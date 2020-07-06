@@ -1,0 +1,23 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="actionBarStyle">@style/Widget.Styled.ActionBar</item>
+        <item name="actionMenuTextColor">@color/textColorActionBar</item>
+        <item name="android:textColorSecondary">@color/textColorActionBar</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Widget.Styled.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="titleTextStyle">@style/ActionBarTitleText</item>
+
+    </style>
+
+    <style name="ActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/textColorActionBar</item>
+        <item name="android:textSize">@dimen/dime24sp</item>
+    </style>
+
+
+</resources>

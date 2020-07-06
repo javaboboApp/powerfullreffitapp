@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <View
+            android:id="@+id/focusable_view"
+            android:layout_width="0.5dp"
+            android:layout_height="0.5dp"
+            android:focusableInTouchMode="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"></View>
+
+        <EditText
+            android:id="@+id/title_edittext"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/dime16dp"
+            android:background="@drawable/shape_border_and_background"
+            android:hint="@string/title"
+            android:imeOptions="flagNoExtractUi"
+            android:maxLines="1"
+            android:padding="@dimen/dime16dp"
+            android:textColorHint="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/desc_editText"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_margin="@dimen/dime16dp"
+            android:background="@drawable/shape_border_and_background"
+            android:gravity="top"
+            android:hint="@string/type_a_nice_history"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:padding="@dimen/dime16dp"
+            android:imeOptions="flagNoExtractUi"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColorHint="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_edittext" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -31,6 +31,8 @@
             android:layout_margin="@dimen/dime16dp"
             android:hint="@string/title"
             android:padding="@dimen/dime16dp"
+            android:textSize="@dimen/dime24sp"
+            android:textStyle="bold"
             android:textColorHint="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,11 +46,23 @@
             android:layout_margin="@dimen/dime16dp"
             android:gravity="top"
             android:padding="@dimen/dime16dp"
+
             android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/title_textview"
             tools:text="Some description" />
+
+        <ImageView
+            android:id="@+id/image_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_textview"
+            android:maxHeight="250dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/date_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desc_textview" />
 
         <TextView
             android:id="@+id/date_textview"
@@ -58,7 +72,7 @@
             android:padding="@dimen/dime8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_textview"
+            app:layout_constraintTop_toBottomOf="@+id/image_imageview"
             tools:text="10 of June" />
 
 

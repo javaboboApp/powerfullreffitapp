@@ -4,10 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import android.view.*
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.javabobo.reddit.R
 import com.javabobo.reddit.models.Post
+import com.javabobo.reddit.utils.Constants
 import com.javabobo.reddit.utils.DateUtils.getDate
 import kotlinx.android.synthetic.main.fragment_post_info.*
+import kotlinx.android.synthetic.main.item_adapter_post.view.*
 
 class PostInfoFragment : BaseFragment() {
 
@@ -57,6 +61,10 @@ class PostInfoFragment : BaseFragment() {
 
     private fun setUpPost() {
          post = PostInfoFragmentArgs.fromBundle(requireArguments()).post
+        Glide.with(requireContext())
+            .load(Constants.PATH_IMAGE + post.postId + "?alt=media")
+            .apply( RequestOptions().override(600, 600))
+            .into(image_imageview)
         title_textview.text = post.title
         desc_textview.text = post.desc
         date_textview.text = getDate(post.timestamp)
